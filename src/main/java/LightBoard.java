@@ -34,16 +34,14 @@ public class LightBoard
         numOn++;
       }
     }
-    if(lights[row][col] && numOn%2==0){
+    if(lights[row][col]==true && numOn%2==0){
       return false;
-    } if(!lights[row][col] && numOn%3 ==0){
+    } if(!lights[row][col]==false && numOn%3 ==0){
       return true;
     }
     return lights [row][col];
   }
    
- 
-  }
   public boolean[][] getLights()
   {
     return lights;
